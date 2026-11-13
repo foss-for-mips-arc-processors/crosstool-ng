@@ -61,7 +61,7 @@ do_ncurses_for_host() {
     opts+=( "${CT_NCURSES_HOST_CONFIG_ARGS[@]}" )
 
     local widec=n
-    if [ "${CT_TOOLCHAIN_TYPE}" = "cross" ] && [ "${CT_ARCH_ARC}" = "y" ]; then
+    if [ "${CT_TOOLCHAIN_TYPE}" = "cross" ]; then
         case "${CT_HOST}" in
             *-*-linux*)
                 widec=y
